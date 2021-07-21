@@ -1,0 +1,15 @@
+# https://flank.github.io/flank/#flank-configuration
+gcloud:
+  results-bucket: fgs21
+  results-dir: metrics
+  record-video: true
+  timeout: 30m
+  app: build/app/outputs/flutter-apk/app-profile.apk
+  test: build/app/outputs/flutter-apk/app-profile-androidTest.apk
+  directories-to-pull:
+    - /sdcard
+  performance-metrics: true
+
+flank:
+  local-result-dir: metrics
+
