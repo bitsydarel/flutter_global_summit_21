@@ -4,6 +4,15 @@ dbstyleguidechecker --project-type flutter --reporter-type console .
 
 test_coverage --package-name flutter_global_summit_21 --src-dir lib --min-cov 0.7 --project-type flutter . || exit
 
+# Startup tracing
+#flutter run --profile --trace-startup  integration_test/start_up_performance_test.dart
+
+# Shaders sksl compilation.
+#flutter drive --profile --cache-sksl \
+#  --write-sksl-on-exit shaders.sksl.json \
+#  --driver=test_driver/integration_test.dart \
+#  --target=integration_test/shader_compilation_test.dart
+
 flutter build apk --profile
 
 dir=$(pwd)
