@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 brew install lcov
 
 pub global activate db_test_coverage 0.1.0
